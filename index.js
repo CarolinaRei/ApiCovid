@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 //Ligar à BD
-const dbPath = 'mongodb://localhost/CovidA';
+const dbPath = 'mongodb://localhost/CovidAPI';
 const options = {useNewUrlParser: true, useUnifiedTopology: true}
 const mongo = mongoose.connect(dbPath, options);
 
@@ -34,7 +34,7 @@ else
     console.log("DB Connected Successfully");
 
 // Porto Servidor
-var port = process.env.PORT || 6666;
+var port = process.env.PORT || 5000;
 
 
 //Usar API routes na app
